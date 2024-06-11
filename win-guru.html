@@ -1,0 +1,339 @@
+ <!DOCTYPE html>
+ <html lang="pt-BR">
+ <head>
+    <a href="#blaze-6" id="clicksorte"></a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./firebase-config.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./win.css">
+    <title>Win Guru</title>
+ </head>
+ <body>
+    <header>
+        <div class="containerheader1 left loading">
+            <img src="img/guru logo6.png" alt="win">
+        </div>
+        <div class="containerheader1 left icons-suport">
+            <a href="#">
+                <ion-icon name="cash" class="icons-center"></ion-icon>
+            </a>
+            <a href="#blaze-6">
+                <ion-icon name="game-controller" class="icons-center"></ion-icon>
+            </a>
+            <a href="#">
+                <ion-icon name="storefront" class="icons-center"></ion-icon>
+            </a>
+        </div>
+        <div class="containerheader1 right">
+            <div class="linear">
+                <span id="user-name-profile" class="loading">*******</span>
+                <img class="" id="image-profile" alt="perfil-photo" src="https://firebasestorage.googleapis.com/v0/b/win-guru-bet.appspot.com/o/www%2Fphotos%2Fuser-default.jpg?alt=media&token=9858a407-d994-4cf2-8e83-5494e0a07f16">
+            </div>
+            <button class="open-opt">
+                <ion-icon name="ellipsis-vertical-sharp"></ion-icon>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="secoes sec-bot">
+            <div class="chat-bot loading" id="chatBot">
+            </div>
+        </section>
+        <section class="secoes sec-simulator">
+            <div class="blaze-aovivo loading">
+                <div class="roleta">
+                    <hr class="ponteiro">
+                    <div class="blur"></div>
+                    <div class="roulette-slider" id="roulette_slider">
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number">6</div></div>
+                        <div class="lg-box r-black"><div class="number">9</div></div>
+                        <div class="lg-box r-red"><div class="number">7</div></div>
+                        <div class="lg-box r-black"><div class="number">8</div></div>
+                        <div class="lg-box r-red"><div class="number">1</div></div>
+                        <div class="lg-box r-black"><div class="number">14</div></div>
+                        <div class="lg-box r-red"><div class="number">2</div></div>
+                        <div class="lg-box r-black"><div class="number">13</div></div>
+                        <div class="lg-box r-red"><div class="number">3</div></div>
+                        <div class="lg-box r-black"><div class="number">12</div></div>
+                        <div class="lg-box r-red"><div class="number">4</div></div>
+                        <div class="lg-box r-white">
+                            <img alt="logo-win" src="./img/logo-wrapper-white.png" />
+                        </div>
+                        <div class="lg-box r-black"><div class="number">11</div></div>
+                        <div class="lg-box r-red"><div class="number">5</div></div>
+                        <div class="lg-box r-black"><div class="number">10</div></div>
+                        <div class="lg-box r-red"><div class="number" id="blaze-6">6</div></div>
+                        
+                    </div>                                       
+                </div>
+                <div class="container-roleta  bets ">
+                    <input type="number" name="aposta" id="valor-aposta" min="0" placeholder="R$ 0,00">
+                    <div>
+                        <button class="actions-aposta">1/2</button>
+                        <button class="actions-aposta">2x</button>
+                    </div>
+                </div>
+                <div class="container-roleta">
+                    <button class="multiplicador-cores m-red" onclick="girar()">2x</button>
+                    <button class="multiplicador-cores m-white">14x</button>
+                    <button class="multiplicador-cores m-black">2x</button>
+                </div>
+            </div>
+            <div class="graphic loading">
+                <div class="grafico">
+                    <span>Saídas:</span>
+                    <div class="analytics">
+                        <div class="containerTag">
+                            <div class="tagColor tag-red"></div>
+                            <span>40%</span>
+                        </div>
+                        <div class="containerTag">
+                            <div class="tagColor tag-white"></div>
+                            <span>3%</span>
+                        </div>
+                        <div class="containerTag">
+                            <div class="tagColor tag-black"></div>
+                            <span>57%</span>
+                        </div>
+                        
+                    </div>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </section>
+        <section class="secoes sec-chat">
+            <div class="chat-user loading">
+                <div class="user-console" id="userConsole">
+                    <div class="scrollable" id="scroll-content"></div>
+                </div>
+                <div class="linear-user">
+                    <div class="send-talk">
+                        <input type="text"id="msg_user_chat" placeholder="Menssagem..." maxlength="50">
+                        <button id="send_msg_user" onclick="send_msg()">
+                          <ion-icon name="send-sharp" class="icons-users"></ion-icon>  
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./index.js"></script>
+ </body>
+ </html>

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'sofia-pro';
+    src: url('./font/sofia-pro/Sofia\ Pro\ Light\ Az.woff');
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'sofia-pro', sans-serif;
+    user-select: none;
+    outline: none;
+    font-size: 1em;
+}
+:root {
+    --dark-color: #131314;
+    --primary-color: #23252e;
+    --secundary-color: #3d3d44;
+    --sistem-color: #18181d;
+    --color-tema: #327732;
+}

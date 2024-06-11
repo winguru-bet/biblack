@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="firebase-config.js"></script>
+    <link rel="stylesheet" href="style-login.css">
+    <title>Win Login</title>
+</head>
+<body>
+    <div id="notification">
+        <div class="contain-not _not-con">
+            <span id="content-not">E-mail ou senha invalidos!</span>
+        </div>
+        <div class="contain-not">
+            <div class="time-not"></div>
+        </div>
+    </div>
+    <main>
+        <div class="container-level1 container-slider">
+            <section class="slide" id="slide">
+                <div class="_contain" id="img-fly1">
+                    <img class="flyer" src="img/blaze-crash.png" alt="Flyer">
+                </div>
+                <div class="_contain" id="img-fly2">
+                    <img class="flyer" src="img/blaze-double.png" alt="Flyer">
+                </div>
+                <div class="_contain" id="img-fly3">
+                    <img class="flyer" src="img/blaze-crash.png" alt="Flyer">
+                </div>
+                <div class="_contain" id="img-fly4">
+                    <img class="flyer" src="img/blaze-double.png" alt="Flyer">
+                </div>       
+            </section>
+           
+        </div>
+        <div class="container-level1">
+            <div class="login" id="login">
+                <div>
+                    <img id="logo1-win" src="./img/guru-solo.png" alt="gurulogo">
+                    <img id="logo2-win" src="./img/guru logo6.png" alt="gurulogo">
+                </div>
+                <section class="login-section">
+                    <div class="container-level2">
+                        <div class="linear">
+                            <label for="#" class="icon-text">
+                                <ion-icon name="person-sharp"></ion-icon>
+                            </label>
+                            <input type="email" class="edittext" id="email" placeholder="E-mail" required>
+                        </div>
+                    </div>
+                    <div class="container-level2">
+                        <div class="linear">
+                            <label for="#" class="icon-text">
+                                <ion-icon name="lock-open-sharp"></ion-icon>
+                            </label>
+                            <input type="password" class="edittext" id="password" placeholder="Senha" required>
+                        </div>
+                    </div>
+                    <div class="container-level2 recovery-pwd">
+                    </div>
+                    <div class="container-level2">
+                        <button id="button_log" class="button-log" onclick="userVerification()">Entrar</button>
+                    </div>
+                    <div class="container-level2">
+                        <input type="checkbox" id="remenber">
+                        <label for="#" class="remenberme">Lembre-me</label> 
+                    </div>
+                    <footer>
+                        <span>
+                            Caso você ainda não possua cadastro, clique em <a href="#cadastro">Criar Conta</a>, ou em <a href="#">Esqueci minha senha</a> para altera-la
+                        </span>
+                    </footer>
+                </section>
+            </div>
+            <div class="cadastro" id="cadastro">
+                <form action="">
+                    <fieldset class="input-legend">
+                        <legend>Nome Completo*</legend>
+                        <input class="edittext-cadastro editprofile" type="text" id="fullName">
+                    </fieldset>
+                    <div class="container-cadastro">
+                        <fieldset class="input-legend">
+                            <legend>Apelido*</legend>
+                            <input class="edittext-cadastro editprofile" type="text" id="nickName" maxlength="12" minlength="6">
+                        </fieldset>
+                        <fieldset class="input-legend">
+                            <legend>Nascimento*</legend>
+                            <input class="edittext-cadastro editprofile" type="date" id="birth">
+                        </fieldset>
+                    </div>
+                    <div>
+                        <span class="text-sex">Sexo*:</span>
+                        <input type="radio" name="genero" id="masculino">
+                        <label for="masculino" class="label-sex">Masculino</label>
+                        <input type="radio" name="genero" id="feminino">
+                        <label for="feminino" class="label-sex">Feminino</label>
+                    </div>
+                    <fieldset class="input-legend">
+                        <legend>E-mail*</legend>
+                        <input class="edittext-cadastro" type="email" id="newUser">
+                    </fieldset>
+                    <div class="container-cadastro">
+                        <fieldset class="input-legend">
+                            <legend>Senha*</legend>
+                            <input class="edittext-cadastro" type="text" id="passUser">
+                        </fieldset>
+                        <fieldset class="input-legend">
+                            <legend>Repita a Senha*</legend>
+                            <input class="edittext-cadastro" type="text" id="passUserConfirm">
+                        </fieldset>
+                    </div>
+                    <button class="btn-cadastrar" id="button_cad" type="button" onclick="userCreate()">CADASTRAR</button>
+                    <a class="back-login" href="#login" id="back-login">Já possui uma conta?</a>
+                    <div>
+                        <p class="advertencias">
+                            De acordo com nassa <a href="#">política de privacidade</a>, não é permitido
+                            cadastro de pessoas menores de 18 anos. Caso tenha problemmas ao se cadastrar
+                            constate nosso <a href="#">suporte</a>.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="index-login.js"></script>
+</body>
+</html>
