@@ -12,6 +12,7 @@
     <script src="./firebase-config.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="./win.css">
+    <link rel="stylesheet" href="win-mobile.css">
     <title>Win Guru</title>
  </head>
  <body>
@@ -41,6 +42,9 @@
         </div>
     </header>
     <main>
+        <button class="show-chat" onclick="showChat()">
+            <ion-icon name="chatbubble-ellipses-outline" class="icon-buttonChat"></ion-icon>
+        </button>
         <section class="secoes sec-bot">
             <div class="chat-bot loading" id="chatBot">
             </div>
@@ -317,7 +321,7 @@
                 </div>
             </div>
         </section>
-        <section class="secoes sec-chat">
+        <section class="secoes sec-chat" id="sec_chat">
             <div class="chat-user loading">
                 <div class="user-console" id="userConsole">
                     <div class="scrollable" id="scroll-content"></div>

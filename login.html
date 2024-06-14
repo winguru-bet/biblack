@@ -10,12 +10,13 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="firebase-config.js"></script>
     <link rel="stylesheet" href="style-login.css">
+    <link rel="stylesheet" href="login-mobile.css">
     <title>Win Login</title>
 </head>
 <body>
     <div id="notification">
         <div class="contain-not _not-con">
-            <span id="content-not">E-mail ou senha invalidos!</span>
+            <span id="content-not"></span>
         </div>
         <div class="contain-not">
             <div class="time-not"></div>
@@ -39,44 +40,47 @@
             </section>
            
         </div>
-        <div class="container-level1">
+        <div class="container-level1 about-login">
             <div class="login" id="login">
                 <div>
                     <img id="logo1-win" src="./img/guru-solo.png" alt="gurulogo">
                     <img id="logo2-win" src="./img/guru logo6.png" alt="gurulogo">
                 </div>
-                <section class="login-section">
-                    <div class="container-level2">
-                        <div class="linear">
-                            <label for="#" class="icon-text">
-                                <ion-icon name="person-sharp"></ion-icon>
-                            </label>
-                            <input type="email" class="edittext" id="email" placeholder="E-mail" required>
+                <div>
+                    <section class="login-section">
+                        <div class="container-level2">
+                            <div class="linear">
+                                <label for="#" class="icon-text">
+                                    <ion-icon name="person-sharp"></ion-icon>
+                                </label>
+                                <input type="email" class="edittext" id="email" placeholder="E-mail" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="container-level2">
-                        <div class="linear">
-                            <label for="#" class="icon-text">
-                                <ion-icon name="lock-open-sharp"></ion-icon>
-                            </label>
-                            <input type="password" class="edittext" id="password" placeholder="Senha" required>
+                        <div class="container-level2">
+                            <div class="linear">
+                                <label for="#" class="icon-text">
+                                    <ion-icon name="lock-open-sharp"></ion-icon>
+                                </label>
+                                <input type="password" class="edittext" id="password" placeholder="Senha" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="container-level2 recovery-pwd">
-                    </div>
-                    <div class="container-level2">
-                        <button id="button_log" class="button-log" onclick="userVerification()">Entrar</button>
-                    </div>
-                    <div class="container-level2">
-                        <input type="checkbox" id="remenber">
-                        <label for="#" class="remenberme">Lembre-me</label> 
-                    </div>
-                    <footer>
-                        <span>
-                            Caso você ainda não possua cadastro, clique em <a href="#cadastro">Criar Conta</a>, ou em <a href="#">Esqueci minha senha</a> para altera-la
-                        </span>
-                    </footer>
-                </section>
+                        <div class="container-level2 recovery-pwd">
+                        </div>
+                        <div class="container-level2">
+                            <button id="button_log" class="button-log" onclick="userVerification()">Entrar</button>
+                        </div>
+                        <div class="container-level2">
+                            <input type="checkbox" id="remenber">
+                            <label for="#" class="remenberme">Lembre-me</label> 
+                        </div>
+                        <footer>
+                            <span>
+                                Caso você ainda não possua cadastro, clique em <a href="#cadastro">Criar Conta</a>, ou em <a href="#">Esqueci minha senha</a> para altera-la
+                            </span>
+                        </footer>
+                    </section>
+                </div>
+                
             </div>
             <div class="cadastro" id="cadastro">
                 <form action="">

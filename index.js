@@ -143,6 +143,16 @@ function girar() {
     roleta.style.transform = 'translateX(-14200px)'
     console.log('girou')
 }
+function showChat() {
+    let chat = document.getElementById('sec_chat');
+    chat.style.display = "flex"
+}
+document.addEventListener('click', (e) => {
+    if(e.target.id == 'sec_chat') {
+        let chat = document.getElementById('sec_chat');
+        chat.style.display = "none"
+    }
+})
 
 // CONFIGURAÇÕES DO GRÁFICO
 
@@ -157,7 +167,7 @@ new Chart(ctx, {
           ,
         datasets: [
             {
-                label: '# Saida do Vermelho',
+                label: '#Vermelho',
                 data: [10, 3, 6, 4, 1],
                 borderWidth: 2,
                 color: '#fff',
@@ -165,7 +175,7 @@ new Chart(ctx, {
                 backgroundColor: '#f12c4c'
             },
             {
-                label: '# Saida do Preto',
+                label: '#Preto',
                 data: [2, 5, 4, 8, 9],
                 borderWidth: 2,
                 color: '#fff',
@@ -173,7 +183,7 @@ new Chart(ctx, {
                 backgroundColor: '#262f36'
             },
             {
-                label: '# Branco',
+                label: '#Branco',
                 data: [1, 0, 2, 2, 0],
                 borderWidth: 2,
                 color: '#fff',

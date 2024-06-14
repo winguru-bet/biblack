@@ -1,6 +1,5 @@
 @import url('./style-global.css');
 @import url('./animations.css');
-* {scrollbar-width: thin;}
 header {
     display: flex;
     height: 8vh;
@@ -13,11 +12,36 @@ main {
     display: flex;
     height: 84vh;
     z-index: 1;
+    position: relative;
     background-color: var(--primary-color);
 }
 footer {
     height: 8vh;
     background-color: var(--secundary-color);
+}
+.show-chat {
+    display: none;
+    cursor: pointer;
+}
+.show-chat:hover {
+    background-color: #9c9c9c;
+}
+.show-chat::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '1';
+    position: absolute;
+    background-color: #f12c4c;
+    color: #fff;
+    height: 20px;
+    width: 20px;
+    left: -4px;
+    top: -2px;
+    border-radius: 50%;
+}
+.icon-buttonChat {
+    font-size: 2em;
 }
 .secoes {
     padding: 8px;
@@ -120,6 +144,7 @@ footer {
     align-items: center;
     position: relative;
     width: 40%;
+    height: 100%;
 }
 .chat-bot {
     height: 100%;
@@ -129,6 +154,7 @@ footer {
     position: relative;
     border-radius: 10px;
     background-color: var(--sistem-color);
+    
 }
 .chat-bot::-webkit-scrollbar {
     background-color: transparent;
@@ -318,7 +344,9 @@ footer {
     position: absolute;
 }
 .graphic {
+    display: flex;
     max-height: 100%;
+    width: 100%;
     margin: 5px 0 0 0;
     border-radius: 5px;
     position: relative;
@@ -328,6 +356,7 @@ footer {
     color: #fff;
     padding: 5px;
     max-height: 100%;
+    position: relative;
 }
 .analytics {
     display: none;
@@ -352,6 +381,8 @@ footer {
     background-color: #262f36;
 }
 #myChart {
+    max-width: 100%;
+    min-width: 100%;
     max-height: 87%;
 }
 

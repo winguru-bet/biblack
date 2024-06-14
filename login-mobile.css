@@ -1,0 +1,37 @@
+@media screen and (min-width: 300px) and (max-width: 800px){
+    body {
+        display: block;
+    }
+    main {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+    .container-level1 {
+        align-items: unset;
+        height: 100%;
+    }
+    .container-level1:nth-child(1) {
+        display: none;
+    }
+    .cadastro, .login {
+        padding: 40px 0;
+    }
+    .cadastro form {
+        height: auto;
+        width: 350px;
+        padding: 20px 10px;
+        border-radius: 8px;
+        background-color: #fafafa;
+    }
+    #notification {
+        background-color: #fff;
+    }
+    #content-not {
+        color: #000;
+    }
+    .time-not {
+        background-color: red;
+    }
+}
